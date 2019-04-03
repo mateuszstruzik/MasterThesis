@@ -1,0 +1,6 @@
+F:\magisterka\C#code\magisterka\AdoNetSqlServer\bin\Debug\AdoNetSqlServer.dll
+F:\magisterka\C#code\magisterka\AdoNetSqlServer\bin\Debug\AdoNetSqlServer.pdb
+F:\magisterka\C#code\magisterka\AdoNetSqlServer\obj\Debug\AdoNet.csprojAssemblyReference.cache
+F:\magisterka\C#code\magisterka\AdoNetSqlServer\obj\Debug\AdoNet.csproj.CoreCompileInputs.cache
+F:\magisterka\C#code\magisterka\AdoNetSqlServer\obj\Debug\AdoNetSqlServer.dll
+F:\magisterka\C#code\magisterka\AdoNetSqlServer\obj\Debug\AdoNetSqlServer.pdb

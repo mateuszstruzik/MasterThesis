@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B3CD4A4-EF9C-47F6-9B8B-66A3D4A5CFD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tests</RootNamespace>
+    <AssemblyName>Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.2.0\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4" />
+    <Reference Include="Npgsql, Version=4.0.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.2\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.18.3.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.6.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.2.0\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MultitaskingMonitor.cs" />
+    <Compile Include="ORMTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\10TableDB\OracleServerDelete10TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\10TableDB\OracleServerGetDataFromTable10TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\10TableDB\OracleServerInnerJoin10TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\10TableDB\OracleServerInsert10TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\10TableDB\OracleServerOuterJoin10TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\10TableDB\OracleServerUpdate10TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\20TableDB\OracleServerDelete20TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\20TableDB\OracleServerGetDataFromTable20TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\20TableDB\OracleServerInnerJoin20TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\20TableDB\OracleServerInsert20TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\20TableDB\OracleServerOuterJoin20TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\20TableDB\OracleServerUpdate20TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\40TableDB\OracleServerDelete40TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\40TableDB\OracleServerGetDataFromTable40TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\40TableDB\OracleServerInsert40TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\40TableDB\OracleServerOuterJoin40TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\40TableDB\OracleServerUpdate40TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\80TableDB\OracleServerDelete80TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\80TableDB\OracleServerGetDataFromTable80TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\80TableDB\OracleServerInsert80TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\80TableDB\OracleServerOuterJoin80TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\80TableDB\OracleServerUpdate80TableDbADO.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\OraclehelperForTest\OracleDeleteTestHelper.cs" />
+    <Compile Include="Tests\OracleDbServeTests\AdoTests\OraclehelperForTest\OracleUpdateTestHelper.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\10TableDB\OracleGetDataFromTable10TableDBENTI.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\10TableDB\OracleServerDelete10TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\10TableDB\OracleServerInnerJoin10TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\10TableDB\OracleServerInsert10TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\10TableDB\OracleServerOuterJoin10TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\10TableDB\OracleServerUpdate10TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\20TableDB\OracleGetDataFromTable20TableDBENTI.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\20TableDB\OracleServerDelete20TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\20TableDB\OracleServerInnerJoin20TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\20TableDB\OracleServerInsert20TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\20TableDB\OracleServerOuterJoin20TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\20TableDB\OracleServerUpdate20TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\40TableDB\OracleGetDataFromTable40TableDBENTI.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\40TableDB\OracleServerDelete40TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\40TableDB\OracleServerInsert40TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\40TableDB\OracleServerOuterJoin40TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\80TableDB\OracleGetDataFromTable80TableDBENTI.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\80TableDB\OracleServerDelete80TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\80TableDB\OracleServerInsert80TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\80TableDB\OracleServerOuterJoin80TableDbENTITY.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\OracleHelperForTest\OracleDeleteHelperEntity.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\OracleHelperForTest\OracleInsertTestHelperEntity.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\OracleHelperForTest\OracleUpdateTestHelperEntity.cs" />
+    <Compile Include="Tests\OracleDbServeTests\EntityTests\OracleHelperForTest\OracleUpdateTestHelperEntity2.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\10TableDb\OracleGetDataFromTable10TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\10TableDb\OracleServerDelete10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\10TableDb\OracleServerInnerJoin10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\10TableDb\OracleServerInsert10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\10TableDb\OracleServerOuterJoin10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\10TableDb\OracleServerUpdate10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\20TableDb\OracleGetDataFromTable20TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\20TableDb\OracleServerDelete20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\20TableDb\OracleServerInnerJoin20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\20TableDb\OracleServerInsert20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\20TableDb\OracleServerOuterJoin20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\20TableDb\OracleServerUpdate20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\40TableDb\OracleGetDataFromTable40TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\40TableDb\OracleServerDelete40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\40TableDb\OracleServerInsert40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\40TableDb\OracleServerOuterJoin40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\40TableDb\OracleServerUpdate40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\80TableDb\OracleGetDataFromTable80TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\80TableDb\OracleServerDelete80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\80TableDb\OracleServerInsert80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\80TableDb\OracleServerOuterJoin80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\80TableDb\OracleServerUpdate80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\OracleHelperForTest\OracleDeleteTestHelperNHIBERNATE.cs" />
+    <Compile Include="Tests\OracleDbServeTests\NHibernate\OracleHelperForTest\OracleUpdateTestHelperNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\10TableDB\PostgreSQLServerDelete10TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\10TableDB\PostgreSQLServerGetDataFromTable10TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\10TableDB\PostgreSQLServerInnerJoin10TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\10TableDB\PostgreSQLServerInsert10TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\10TableDB\PostgreSQLServerOuterJoin10TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\10TableDB\PostgreSQLServerUpdate10TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\20TableDB\PostgreSQLServerDelete20TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\20TableDB\PostgreSQLServerGetDataFromTable20TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\20TableDB\PostgreSQLServerInnerJoin20TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\20TableDB\PostgreSQLServerInsert20TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\20TableDB\PostgreSQLServerOuterJoin20TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\20TableDB\PostgreSQLServerUpdate20TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\40TableDB\PostgreSQLServerDelete40TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\40TableDB\PostgreSQLServerGetDataFromTable40TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\40TableDB\PostgreSQLServerInsert40TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\40TableDB\PostgreSQLServerOuterJoin40TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\40TableDB\PostgreSQLServerUpdate40TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\80TableDB\PostgreSQLServerDelete80TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\80TableDB\PostgreSQLServerGetDataFromTable80TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\80TableDB\PostgreSQLServerInsert80TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\80TableDB\PostgreSQLServerOuterJoin80TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\AdoTests\80TableDB\PostgreSQLServerUpdate80TableDbADO.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\10TableDb\PostgreSQLGetDataFromTable10TableDBENTI.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\10TableDb\PostgreSQLServerDelete10TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\10TableDb\PostgreSQLServerInnerJoin10TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\10TableDb\PostgreSQLServerInsert10TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\10TableDb\PostgreSQLServerOuterJoin10TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\10TableDb\PostgreSQLUpdate10TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\20TableDb\PostgreSQLGetDataFromTable20TableDBENTI.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\20TableDb\PostgreSQLServerDelete20TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\20TableDb\PostgreSQLServerInnerJoin20TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\20TableDb\PostgreSQLServerInsert20TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\20TableDb\PostgreSQLServerOuterJoin20TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\20TableDb\PostgreSQLUpdate20TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\40TableDb\PostgreSQLGetDataFromTable40TableDBENTI.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\40TableDb\PostgreSQLServerDelete40TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\40TableDb\PostgreSQLServerInsert40TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\40TableDb\PostgreSQLServerOuterJoin40TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\40TableDb\PostgreSQLUpdate40TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\80TableDb\PostgreSQLGetDataFromTable80TableDBENTI.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\80TableDb\PostgreSQLServerDelete80TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\80TableDb\PostgreSQLServerInsert80TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\80TableDb\PostgreSQLServerOuterJoin80TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\80TableDb\PostgreSQLUpdate80TableDbENTITY.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\PostgresHelperForTest\PostgreSQLDeleteTestHelperEntity.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\PostgresHelperForTest\PostgreSQLInsertTestHelperEntity.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\PostgresHelperForTest\PostgreSQLUpdateTestHelperEntity.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\PostgresHelperForTest\PostgreSQLUpdateTestHelperEntity2.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\PostgresHelperForTest\PostgreSQLUpdateTestHelperEntity3.cs" />
+    <Compile Include="Tests\PostgreSQL\EntityTest\PostgresHelperForTest\PostgreSQLUpdateTestHelperEntity4.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\10TableDb\PostgreSQLGetDataFromTable10TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\10TableDb\PostgreSQLInsert10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\10TableDb\PostgreSQLServerDelete10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\10TableDb\PostgreSQLServerInnerJoin10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\10TableDb\PostgreSQLServerOuterJoin10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\10TableDb\PostgreSQLUpdate10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\20TableDb\PostgreSQLGetDataFromTable20TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\20TableDb\PostgreSQLInsert20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\20TableDb\PostgreSQLServerDelete20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\20TableDb\PostgreSQLServerInnerJoin20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\20TableDb\PostgreSQLServerOuterJoin20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\20TableDb\PostgreSQLUpdate20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\40TableDb\PostgreSQLGetDataFromTable40TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\40TableDb\PostgreSQLInsert40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\40TableDb\PostgreSQLServerDelete40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\40TableDb\PostgreSQLServerOuterJoin40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\40TableDb\PostgreSQLUpdate40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\80TableDb\PostgreSQLGetDataFromTable80TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\80TableDb\PostgreSQLInsert80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\80TableDb\PostgreSQLServerDelete80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\80TableDb\PostgreSQLServerOuterJoin80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\80TableDb\PostgreSQLUpdate80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\HelperForTests\PostgreSQLDeleteTestHelperNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\NHibernate\HelperForTests\PostgreSQLUpdateTestHelperNHIBERNATE.cs" />
+    <Compile Include="Tests\PostgreSQL\postgreSQLhelperForTest\PostgreSQLDeleteTestHelper.cs" />
+    <Compile Include="Tests\PostgreSQL\postgreSQLhelperForTest\PostgreSQLUpdateTestHelper.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\10TableDB\SqlServerDelete10TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\10TableDB\SqlServerGetDataFromTable10TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\10TableDB\SqlServerInnerJoin10TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\10TableDB\SqlServerInsert10TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\10TableDB\SqlServerOuterJoin10TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\10TableDB\SqlServerUpdate10TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\20TableDB\SqlServerDelete20TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\20TableDB\SqlServerGetDataFromTable20TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\20TableDB\SqlServerInnerJoin20TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\20TableDB\SqlServerInsert20TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\20TableDB\SqlServerOuterJoin20TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\20TableDB\SqlServerUpdate20TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\40TableDB\SqlServerDelete40TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\40TableDB\SqlServerGetDataFromTable40TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\40TableDB\SqlServerInsert40TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\40TableDB\SqlServerOuterJoin40TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\40TableDB\SqlServerUpdate40TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\80TableDB\SqlServerDelete80TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\80TableDB\SqlServerGetDataFromTable80TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\80TableDB\SqlServerInsert80TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\80TableDB\SqlServerOuterJoin80TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\80TableDB\SqlServerUpdate80TableDbADO.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\HelperForTests\DeleteTestHelper.cs" />
+    <Compile Include="Tests\SqlServerTests\ADOTESTS\HelperForTests\UpdateTestHelper.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\10TableDB\SqlServerDelete10TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\10TableDB\SqlServerGetDataFromTable10TableDBENTI.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\10TableDB\SqlServerInnerJoin10TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\10TableDB\SqlServerInsert10TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\10TableDB\SqlServerOuterJoin10TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\10TableDB\SqlServerUpdate10TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\20TableDb\SqlServerDelete20TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\20TableDb\SqlServerGetDataFromTable20TableDBENTI.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\20TableDb\SqlServerInnerJoin20TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\20TableDb\SqlServerInsert20TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\20TableDb\SqlServerOuterJoin20TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\20TableDb\SqlServerUpdate20TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\40TableDB\SqlServerDelete40TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\40TableDB\SqlServerGetDataFromTable40TableDBENTI.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\40TableDB\SqlServerInsert40TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\40TableDB\SqlServerOuterJoin40TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\40TableDB\SqlServerUpdate40TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\80TableDB\SqlServerDelete80TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\80TableDB\SqlServerGetDataFromTable80TableDBENTI.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\80TableDB\SqlServerInsert80TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\80TableDB\SqlServerOuterJoin80TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\80TableDB\SqlServerUpdate80TableDbENTITY.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\HelperForTest\DeleteTestHelperEntity.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\HelperForTest\InsertTestHelperEntity.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\HelperForTest\UpdateTestHelperEntity.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\HelperForTest\UpdateTestHelperEntity2.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\HelperForTest\UpdateTestHelperEntity3.cs" />
+    <Compile Include="Tests\SqlServerTests\EntityTest\HelperForTest\UpdateTestHelperEntity4.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\10TableDb\SqlServerDelete10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\10TableDb\SqlServerGetDataFromTable10TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\10TableDb\SqlServerInnerJoin10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\10TableDb\SqlServerInsert10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\10TableDb\SqlServerOuterJoin10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\10TableDb\SqlServerUpdate10TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\20TableDb\SqlServerDelete20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\20TableDb\SqlServerGetDataFromTable20TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\20TableDb\SqlServerInnerJoin20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\20TableDb\SqlServerInsert20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\20TableDb\SqlServerOuterJoin20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\20TableDb\SqlServerUpdate20TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\40TableDb\SqlServerDelete40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\40TableDb\SqlServerGetDataFromTable40TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\40TableDb\SqlServerInsert40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\40TableDb\SqlServerOuterJoin40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\40TableDb\SqlServerUpdate40TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\80TableDb\SqlServerDelete80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\80TableDb\SqlServerGetDataFromTable80TableDBNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\80TableDb\SqlServerInsert80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\80TableDb\SqlServerOuterJoin80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\80TableDb\SqlServerUpdate80TableDbNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\HelperForTests\DeleteTestHelperNHIBERNATE.cs" />
+    <Compile Include="Tests\SqlServerTests\NHibernate\HelperForTests\UpdateTestHelperNHIBERNATE.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdoNetSqlServer\DataConnections.csproj">
+      <Project>{782D07D5-1C3C-4135-B1DC-A42B2EFC796F}</Project>
+      <Name>DataConnections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataExtract\DataExtract.csproj">
+      <Project>{F77DCB62-A63A-4761-8E69-1EE638D9818F}</Project>
+      <Name>DataExtract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

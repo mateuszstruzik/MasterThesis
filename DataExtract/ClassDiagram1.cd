@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Table Models ">
+    <Position X="0.5" Y="4" Height="0.75" Width="8.879" />
+  </Comment>
+  <Comment CommentText="Model For Tests&#xD;&#xA;">
+    <Position X="13" Y="4.5" Height="0.75" Width="11.273" />
+  </Comment>
+  <Class Name="DataExtract.Models.ModelsForTests.ModelFor10TableInnerJoin" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="5.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>IEAgAIASigJA49IAAQAABhIQAgAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ModelsForTests\ModelFor10TableInnerJoin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.ModelsForTests.ModelFor10TableOuterJoin" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgACAACCAAiAgAAAAAAhAAAACAAAAAAAAAAIAAgAA=</HashCode>
+      <FileName>Models\ModelsForTests\ModelFor10TableOuterJoin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.ModelsForTests.ModelFor10TablesDBSQLServer">
+    <Position X="13.25" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\ModelsForTests\ModelFor10TablesDBSQLServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_10" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAIEAAAgAAEAAEAkAAEAQAAACAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table10Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_1" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAwACAAAAAgQgAAAABAAAAECAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table1Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_2" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAABIACAAAAAQIQAAAAAgAgAABAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table2Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_3" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAACEACAAAACIEIAAAAEQAQIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table3Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_4" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAgEAACAAAAAECEAAAgAIAIEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table4Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_5" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQARIAACAAAgAABCAAAAAEIECAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table5Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_6" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAABCAAAQIAQBAAAgAAACBAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table6Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_7" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEAACCIAAIEAAAgAAQAAABAgAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table7Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_8" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIBAAICAAAAAAQIEABAAAgAAACBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table8Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Models.TableModels.Table_9" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJACAAECAAAAAAIEIAAAAARAAABAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Table9Model .cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataExtract.Queries.SqQueries" Collapsed="true">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKDt9t8DIehzm+l1AqC5PkAQAAEIAYDLQAAQI0CIYV8=</HashCode>
+      <FileName>Queries\SqQueries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExtract.Repository.OracleDbServer.OracleDbServerRepositoryNHibernate">
+    <Position X="21" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACgAAEAAAQCAAABAAAAAEAAAAIAAIA=</HashCode>
+      <FileName>Repository\OracleDbServer\OracleDbServerRepositoryNHibernate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExtract.Repository.OracleDbServer.OracleDbServerRpositoryAdo">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAACAAAAAQAAAEAAAEgAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\OracleDbServer\OracleDbServerRpositoryAdo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExtract.Repository.PostgreSQLServer.PostgreSQLServerRepositoryNHibernate">
+    <Position X="17.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACgAAEAAAQCAAABAIAAAEAAAAAAAIA=</HashCode>
+      <FileName>Repository\PostgreSQLServer\PostgreSQLServerRepositoryNHibernate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExtract.Repository.PostgreSQLServer.PostgreSqlServerRpositoryAdo">
+    <Position X="6.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAACAAAAAQAAAAAAAAgAACAAAAAAAA=</HashCode>
+      <FileName>Repository\PostgreSQLServer\PostgreSqlServerRpositoryAdo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExtract.Repository.SQLServer.SqlServerRepositoryNHibernate">
+    <Position X="14.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACoAAEAAAQAAAABAAAIAEAAAAAAAIA=</HashCode>
+      <FileName>Repository\SQLServer\SqlServerRepositoryNHibernate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataExtract.Repository.SQLServer.SqlServerRpositoryAdo">
+    <Position X="1.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAACAABAAQAAAAgAAAgAACAAAAAAAA=</HashCode>
+      <FileName>Repository\SQLServer\SqlServerRpositoryAdo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="DataExtract.Models.TableModels.IModels">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TableModels\SingleTablesModels\Interface\IModels.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

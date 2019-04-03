@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F77DCB62-A63A-4761-8E69-1EE638D9818F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataExtract</RootNamespace>
+    <AssemblyName>DataExtract</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.2.0\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.1.2\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.2.3\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.0.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.4\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.6.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.2.0\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\EntityContext\20TableDB\OracleContextFor20TableDB.cs" />
+    <Compile Include="Models\EntityContext\20TableDB\PostgreSQLContextFor20TableDB.cs" />
+    <Compile Include="Models\EntityContext\20TableDB\SqlServerContextFor20TableDB.cs" />
+    <Compile Include="Models\EntityContext\40TableDB\OracleContextFor40TableDB.cs" />
+    <Compile Include="Models\EntityContext\40TableDB\PostgreSQLContextFor40TableDB.cs" />
+    <Compile Include="Models\EntityContext\40TableDB\SqlServerContextFor40TableDB.cs" />
+    <Compile Include="Models\EntityContext\80TableDB\OracleContextFor80TableDB.cs" />
+    <Compile Include="Models\EntityContext\80TableDB\PostgreSQLContextFor80TableDB.cs" />
+    <Compile Include="Models\EntityContext\80TableDB\SqlServerContextFor80TableDB.cs" />
+    <Compile Include="Models\EntityContext\ContextFor10TableDB.cs" />
+    <Compile Include="Models\EntityContext\OracleContextFor10TableDB.cs" />
+    <Compile Include="Models\EntityContext\PostgreSQLContextFor10TableDB.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor10TableInnerJoin.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor10TableOuterJoin.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor10TablesDBSQLServer.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor20TableInnerJoin.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor20TableOuterJoin.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor20TablesDB.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor40TableInnerJoin.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor40TableOuterJoin.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor40TablesDB.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor80TableOuterJoin.cs" />
+    <Compile Include="Models\ModelsForTests\ModelFor80TablesDB.cs" />
+    <Compile Include="Models\NHibernateMappingClass\InnerJoin\InnerJoin10TableMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\InnerJoin\InnerJoin20TableMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\OuterJoin\OterJoin10TableMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\OuterJoin\OterJoin20TableMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\OuterJoin\OterJoin40TableMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\OuterJoin\OterJoin80TableMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table10ModelMaps.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table11ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table12ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table13ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table14ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table15ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table16ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table17ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table18ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table19ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table1ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table20ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table21ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table22ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table23ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table24ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table25ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table26ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table27ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table28ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table29ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table2ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table30ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table31ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table32ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table33ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table34ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table35ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table36ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table37ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table38ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table39ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table3ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table40ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table41ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table42ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table43ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table44ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table45ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table46ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table47ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table48ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table49ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table4ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table50ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table51ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table52ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table53ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table54ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table55ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table56ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table57ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table58ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table59ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table5ModelMaps.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table60ModelMap.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table6ModelMaps.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table7ModelMaps.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table8ModelMaps.cs" />
+    <Compile Include="Models\NHibernateMappingClass\Table9ModelMaps.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_23.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_24.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_25.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table10Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table11Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table6Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table5Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table4Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table3Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table2Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table1Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Interface\IModels.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table7Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table8Model.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table9Model .cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_12.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_13.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_14.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_15.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_16.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_17.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_18.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_19.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_20.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_21.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_22.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_26.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_27.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_28.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_29.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_30.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_31.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_32.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_33.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_34.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_35.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_36.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_37.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_38.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_39.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_40.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_41.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_42.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_43.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_44.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_45.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_46.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_47.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_48.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_49.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_50.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_51.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_52.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_53.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_54.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_55.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_56.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_57.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_58.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_59.cs" />
+    <Compile Include="Models\TableModels\SingleTablesModels\Table_60.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\SqQueries.cs" />
+    <Compile Include="Repository\OracleDbServer\OracleDbServerRpositoryAdo.cs" />
+    <Compile Include="Repository\OracleDbServer\OracleDbServerRepositoryNHibernate.cs" />
+    <Compile Include="Repository\PostgreSQLServer\PostgreSQLServerRepositoryNHibernate.cs" />
+    <Compile Include="Repository\PostgreSQLServer\PostgreSqlServerRpositoryAdo.cs" />
+    <Compile Include="Repository\SQLServer\SqlServerRepositoryNHibernate.cs" />
+    <Compile Include="Repository\SQLServer\SqlServerRpositoryAdo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdoNetSqlServer\DataConnections.csproj">
+      <Project>{782D07D5-1C3C-4135-B1DC-A42B2EFC796F}</Project>
+      <Name>DataConnections</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
